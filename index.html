@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Flexbox Project</title>
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+  <style media="screen">
+  .column1 { background-image:url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500); }
+  .column2 { background-image:url(https://source.unsplash.com/rFKUFzjPYiQ/1500x1500); }
+  .column3 { background-image:url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d); }
+  .column4 { background-image:url(https://source.unsplash.com/ITjiVXcwVng/1500x1500); }
+  .column5 { background-image:url(https://source.unsplash.com/3MNzGlQM7qs/1500x1500); }
+
+  body {
+    font-family: 'Dosis', sans-serif;
+    color: white;
+    font-size: 20px;
+    font-weight: 100;
+    text-shadow: 1px 1px grey;
+  }
+
+  .main {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  .panel {
+    display: flex;
+    flex: 1;
+    background-size: cover;
+    transition: all 0.5s cubic-bezier(0.61, -0.15, 0.7, -0.13);
+    flex-direction: column;
+  }
+
+  .large {
+    flex: 4;
+    font-size: 140%;
+  }
+
+  .panel p {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s;
+  }
+
+  .panel p:first-child {
+    transform: translateY(-100%);
+  }
+
+  .panel p:last-child {
+    transform: translateY(100%);
+  }
+
+  .large-active p:first-child {
+    transform: translateY(0);
+  }
+
+  .large-active p:last-child {
+    transform: translateY(0);
+  }
+
+  .centered {
+    font-size: 2em;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="panel column1">
+        <p>Hey</p>
+        <p class="centered">Let's</p>
+        <p>Dance</p>
+    </div>
+    <div class="panel column2">
+        <p>Give</p>
+        <p class="centered">Take</p>
+        <p>Receive</p>
+    </div>
+    <div class="panel column3">
+        <p>Experience</p>
+        <p class="centered">It</p>
+        <p>Today</p>
+    </div>
+    <div class="panel column4">
+        <p>Give</p>
+        <p class="centered">All</p>
+        <p>You can</p>
+    </div>
+    <div class="panel column5">
+        <p>Life</p>
+        <p class="centered">In</p>
+        <p>Motion</p>
+    </div>
+  </div>
+</body>
+<script src="flexbox.js" charset="utf-8"></script>
+</html>
